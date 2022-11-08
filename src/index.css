@@ -1,0 +1,111 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  content: url(/public/f1.jpg) url(/public/f2.png) url(/public/f3.jpg) url(/public/f5.jpg) url(/public/f7.png) url(/public/f8.jpg) url(/public/f6.png) url(/public/f9.png);
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/public/f2.png);
+    background-size: cover;
+    background-position: center;
+
+    transition: .3s;
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 27s;
+    animation: delay 15px;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-play-state:running;
+    animation-timing-function:ease-in-out;
+}
+
+
+@keyframes animate {
+    0% {background-image: url(/public/f1.jpg);}
+    10% {background-image: url(/public/f3.jpg);}
+    20% {background-image: url(/public/f9.png);}
+    30% {background-image: url(/public/f5.jpg);}
+    50% {background-image: url(/public/f6.png);}
+    70% {background-image: url(/public/f7.png);}
+    90% {background-image: url(/public/f8.jpg);}
+}
+
+.titulo {
+    position: absolute;
+    width: 740px;
+    height: 320px;
+
+    background: rgba(0, 0, 0, 0.71);
+    background-image: url(/public/11.png);
+    border-radius: 19px;
+    left: 50px;
+    top: 50px;
+}
+
+.imgTitulo {
+    background-image: url(/public/10.png);
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.button {
+position: absolute;
+width: 285px;
+height: 60px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+font-family: 'Anton', sans-serif;
+font-style: bold;
+font-weight: 400;
+font-size: 30px;
+line-height: 60px;
+
+color: #000000;
+cursor: pointer;
+}
+
+.img1 {
+    position: absolute;
+    transition: .4s;
+    transform-origin: 50%, 50%;
+    width: 100%;
+}
+.box {
+    float: right;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+
+.img2 {
+    filter: blur(20px);
+    transform: scale(1.1);
+    opacity: 1;
+    transition: .4s;
+    width: 100%;
+}
+.box:hover .img1 {
+    filter: blur(20px);
+    transform: scale(1.1);
+    opacity: 0;
+}
+
+.box:hover .img2 {
+    filter: blur(20px);
+    transform: scale(1.1);
+    opacity: 0;
+}
+
+/* image 1 */
+
