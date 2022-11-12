@@ -3,6 +3,7 @@ import CreateModule from './components/CreateModule.js';
 import { useState } from 'react';
 import { getValue } from '@testing-library/user-event/dist/utils/index.js';
 import JoinModule from './components/JoinModule.js';
+import StatisticsModule from './components/StatisticsModule.js';
 
 function App() {
 
@@ -32,7 +33,11 @@ function App() {
                 <CreateModule
                     setHomeScreen = {home}
                 />
-                :<JoinModule/>
+                : moduloActual === 2 ? 
+                <JoinModule/>
+                : <StatisticsModule
+                    setHomeScreen = {home}
+                />
             }
         </div>
     );
