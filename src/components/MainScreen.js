@@ -1,19 +1,14 @@
 import { Component } from "react";
 
 
-class MainScreen extends Component {
-    render() {
+export default function MainScreen(props) {
         return (
-            <div>
+            <div className="container">
                 <div className="titulo">
-                    <img className="imgTitulo"/>
                 </div>
-                <button className="button" style={{left: "90px", top: "630px"}}>CREAR PARTIDA</button>
-                <button className="button" style={{left: "90px", top: "710px"}}>UNIRSE</button> 
+                <button className="button" onClick = {() => props.setCreateModule(1)} style={{left: "90px", top: "630px"}}>CREAR PARTIDA</button>
+                <button className="button" onClick = {() => props.setJoinModule(2)} style={{left: "90px", top: "710px"}}>UNIRSE</button> 
                 <button className="button" style={{left: "90px", top: "790px"}}>ESTADISTICAS</button>
             </div>
-        );
-    }
+        )
 }
-
-export default MainScreen;
