@@ -8,6 +8,55 @@ body {
   content: url(/public/f1.jpg) url(/public/f2.png) url(/public/f3.jpg) url(/public/f5.jpg) url(/public/f7.png) url(/public/f8.jpg) url(/public/f6.png) url(/public/f9.png);
 }
 
+
+.squareSelection {
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1055px;
+    height: 871px;
+
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    left: 432px;
+    top: 50px;
+
+    
+
+}
+
+.squareSelectionAux {
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1055px;
+    height: 100px;
+    left: 0px;
+    top: 771px;
+
+    background: #750606;
+    border: 3px solid #000000;
+
+
+
+    left: 432px;
+    top: 840px;
+}
+
+
+.joinModule {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #0E1DA1;
+}
+
 .container {
     height: 100vh;
     width: 100%;
@@ -50,12 +99,26 @@ body {
     top: 50px;
 }
 
+.titulo2 {
+    position: absolute;
+    width: 258px;
+    height: 110px;
+
+    background: rgba(0, 0, 0, 0.71);
+    background-image: url(/public/t2.png);
+    border-radius: 10px;
+    left: 30px;
+    top: 840px;
+}
+
 .imgTitulo {
     background-image: url(/public/10.png);
     position: absolute;
     left: 50px;
     top: 50px;
 }
+
+
 
 .button {
 position: absolute;
@@ -107,5 +170,4 @@ cursor: pointer;
     opacity: 0;
 }
 
-/* image 1 */
 
