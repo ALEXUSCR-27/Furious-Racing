@@ -1,5 +1,7 @@
 
-
+/*
+* Codigo css del estilo principal del cuerpo de varias secciones del juego
+*/
 body {
   margin: 0;
   padding: 0;
@@ -8,55 +10,9 @@ body {
   content: url(/public/f1.jpg) url(/public/f2.png) url(/public/f3.jpg) url(/public/f5.jpg) url(/public/f7.png) url(/public/f8.jpg) url(/public/f6.png) url(/public/f9.png);
 }
 
-
-.squareSelection {
-
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 1055px;
-    height: 871px;
-
-    background: #FFFFFF;
-    border: 3px solid #000000;
-    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
-    left: 432px;
-    top: 50px;
-
-    
-
-}
-
-.squareSelectionAux {
-
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 1055px;
-    height: 100px;
-    left: 0px;
-    top: 771px;
-
-    background: #750606;
-    border: 3px solid #000000;
-
-
-
-    left: 432px;
-    top: 840px;
-}
-
-
-.joinModule {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-color: #0E1DA1;
-}
-
+/*
+* Codigo css para el estilo y transicion de imagenes de fondo del juego
+*/
 .container {
     height: 100vh;
     width: 100%;
@@ -76,7 +32,9 @@ body {
     animation-timing-function:ease-in-out;
 }
 
-
+/*
+* Codigo de configuracion de la transicion de las imagenes de fondo del juego
+*/
 @keyframes animate {
     0% {background-image: url(/public/f1.jpg);}
     10% {background-image: url(/public/f3.jpg);}
@@ -87,6 +45,9 @@ body {
     90% {background-image: url(/public/f8.jpg);}
 }
 
+/*
+* Codigo css del texto del logo del juego
+*/
 .titulo {
     position: absolute;
     width: 740px;
@@ -99,6 +60,9 @@ body {
     top: 50px;
 }
 
+/*
+* Codigo css del fondo del logo del juego
+*/
 .titulo2 {
     position: absolute;
     width: 258px;
@@ -111,32 +75,165 @@ body {
     top: 840px;
 }
 
-.imgTitulo {
-    background-image: url(/public/10.png);
-    position: absolute;
-    left: 50px;
-    top: 50px;
-}
-
-
-
+/*
+* Codigo css del estilo de los botones
+*/
 .button {
-position: absolute;
-width: 285px;
-height: 60px;
-
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-font-family: 'Anton', sans-serif;
-font-style: bold;
-font-weight: 400;
-font-size: 30px;
-line-height: 60px;
-
-color: #000000;
-cursor: pointer;
+    position: absolute;
+    width: 285px;
+    height: 60px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    font-family: 'Anton', sans-serif;
+    font-style: bold;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 60px;
+    
+    color: #000000;
+    cursor: pointer;
 }
+
+.buttonHome {
+    width: 100px;
+    height: 96px;
+    border: transparent;
+    position: absolute;
+    background-image: url(/public/home.png);
+    cursor: pointer;
+}
+
+/*
+* Codigo css de los cuadros del cuadro principal de la seccion de crear partida
+*/
+.squareSelection {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1055px;
+    height: 871px;
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    left: 432px;
+    top: 50px;
+
+}
+
+/*
+* Codigo css del cuadro inferior del cuadro principal de la seccion de crear partida
+*/
+.squareSelectionAux {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1055px;
+    height: 100px;
+    left: 0px;
+    top: 771px;
+    background: #750606;
+    border: 3px solid #000000;
+    left: 432px;
+    top: 840px;
+}
+
+/*
+* Codigo css del cuadro izquierdo de la seccion de estadisticas del juego
+*/
+.squareStatistics1 {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 700px;
+    height: 927px;
+
+    background-image: url(/public/m3.png);
+}
+
+/*
+* 
+*/
+.joinModule {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #0E1DA1;
+}
+
+
+/*
+* Codgigo css para el estilo de la tabla de informacion de la seccion de estadisticas del juego
+*/
+.cuadroT {
+    box-sizing: border-box;
+    position: absolute;
+    width: 530px;
+    height: 700px;
+    left: 100px;
+    top: 100px;
+
+    font-family: 'Anton', sans-serif;
+    color: #000000;
+    font-style: bold;
+    font-size: 22px;
+    line-height: 30px;
+    text-align:center;
+    overflow-x: auto;
+    
+}
+
+.table1 {
+    height: 100%;
+    margin: auto;
+    overflow: auto;
+    table-layout: fixed;
+
+}
+
+
+.table1 thead {
+    position:sticky;
+    width: 10px;
+    top: 0;
+    z-index: 99;
+}
+
+
+.table1 tbody {
+
+    width: auto;
+    height: 150px;
+    width: 200px;
+    overflow: auto;
+  }
+
+.filaT1 {
+    margin: auto;
+    border-bottom: 4px solid #FFFFFF;
+    background: #C7C6F3;
+    border-radius: 16px;
+}
+.t {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .img1 {
     position: absolute;
