@@ -12,6 +12,7 @@ function App() {
     //variable para cambiar entre los modulos
     //(0:Modulo principal - 1:Modulo de crear partida - 2:Modulo de unirse a partida)
     const [moduloActual, setmoduloActual] = useState(0) //variable para cambiar entre los modulos
+    const [lista1, setLista1] = useState([])
 
     const cambiarModulo = (value) => {
         setmoduloActual(value)
@@ -19,6 +20,10 @@ function App() {
 
     const home = () => {
         setmoduloActual(0)
+    }
+
+    const llenarLista = (value) => {
+        setLista1(value)
     }
 
     return (
@@ -37,6 +42,7 @@ function App() {
                 <JoinModule/>
                 : <StatisticsModule
                     setHomeScreen = {home}
+                    setLista = {llenarLista}
                 />
             }
         </div>
