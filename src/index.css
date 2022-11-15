@@ -7,7 +7,8 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  content: url(/public/f1.jpg) url(/public/f2.png) url(/public/f3.jpg) url(/public/f5.jpg) url(/public/f7.png) url(/public/f8.jpg) url(/public/f6.png) url(/public/f9.png);
+  content: url(/public/f1.jpg) url(/public/f2.png) url(/public/f3.jpg) url(/public/f5.jpg) url(/public/f7.png) url(/public/f8.jpg) url(/public/f6.png) url(/public/f9.png)
+  url(/public/t2.png) url(/public/11.png) url(/public/home.png) url(/public/m3.png);
 }
 
 /*
@@ -171,24 +172,56 @@ body {
     box-sizing: border-box;
     position: absolute;
     width: 530px;
-    height: 700px;
+    height: 694px;
+    left: 100px;
+    top: 115px;
+
+    font-family: 'Anton', sans-serif;
+    color: #000000;
+    font-style: bold;
+    font-size: 22px;
+ 
+    text-align:center;
+    overflow-x: auto;
+    
+}
+
+.cuadroT2 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 530px;
+    height: 300px;
     left: 100px;
     top: 100px;
 
     font-family: 'Anton', sans-serif;
     color: #000000;
     font-style: bold;
-    font-size: 22px;
-    line-height: 30px;
-    text-align:center;
+    font-size: 20px;
+    line-height: 20px;
+    text-align:left;
     overflow-x: auto;
+}
+
+.cuadroE {
+    box-sizing: border-box;
+    position: absolute;
+    width: 530px;
+    height: 400px;
+    left: 100px;
+    top: 410px;
+
+    font-family: 'Anton', sans-serif;
+    color: #000000;
+    font-style: bold;
+    font-size: 25px;
     
 }
 
 .table1 {
-    height: 100%;
     margin: auto;
     overflow: auto;
+    border-radius: 5px;
     table-layout: fixed;
 
 }
@@ -196,9 +229,11 @@ body {
 
 .table1 thead {
     position:sticky;
+
     width: 10px;
-    top: 0;
-    z-index: 99;
+    top: 0px;
+
+    background-color: #FFFFFF;
 }
 
 
@@ -208,21 +243,53 @@ body {
     height: 150px;
     width: 200px;
     overflow: auto;
+
   }
+.table1 td {
+    padding: 25px;
+}
+
 
 .filaT1 {
     margin: auto;
-    border-bottom: 4px solid #FFFFFF;
-    background: #C7C6F3;
-    border-radius: 16px;
+    
+    border-bottom: 4px #750606;
+    border-style:double;
+    background:antiquewhite;
 }
-.t {
-    text-align: center;
+.table2 {
+    height: 100%;
+    margin: auto;
+    overflow: auto;
+    table-layout: fixed;
+
 }
 
+.table2 thead {
+    position:sticky; 
+    background-color: #FFFFFF;
+}
 
+.table2 tbody {
+    width: auto;
+    height: 150px;
+    width: 200px;
+    overflow: auto;
+}
 
+.table2 td {
+    padding: 30px;
+}
 
+::-webkit-scrollbar {
+    width: 5px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #750606; 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px #000000; 
+}
 
 
 
