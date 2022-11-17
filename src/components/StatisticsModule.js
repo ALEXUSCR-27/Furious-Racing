@@ -63,10 +63,9 @@ export default function StatisticsModule(props) {
                 </div>
             </div>
             <div className="squareStatistics1" style={{left: "1100px", top: "20px"}}>
-                <label style={{position:"absolute", top:"70px", left:"140px"}}>LISTA DE JUGADORES</label>
                 <div className='cuadroT2'>
                     <table id="listaJ" hidden={true} className='table2' style={{"border-collapse": "collapse"}}>
-                        <thead style={{"border-color":"#750606"}}>
+                        <thead>
                             <tr>
                                 <th>Nombre de Jugador</th>
                                 <th>Posicion final</th>
@@ -83,24 +82,24 @@ export default function StatisticsModule(props) {
                     </table>
                 </div>
                 <div className='cuadroE'>
-                    <label id="labelNP"  hidden={true} style={{position:"absolute", top:"0px"}}>NOMBRE DE PISTA:</label>
-                    <label id ="NP" style={{position:"absolute", top:"0px", left:"180px"}}></label>
+                    <label id="labelNP"  hidden={true} style={{position:"absolute", top:"20px"}}>NOMBRE DE PISTA:</label>
+                    <label id ="NP" style={{position:"absolute", top:"20px", left:"180px"}}></label>
 
-                    <label id="labelID" hidden={true} style={{position:"absolute", top:"60px"}}>ID DE PARTIDA:</label>
-                    <label id ="ID" style={{position:"absolute", top:"60px", left:"145px"}}></label>
+                    <label id="labelID" hidden={true} style={{position:"absolute", top:"70px"}}>ID DE PARTIDA:</label>
+                    <label id ="ID" style={{position:"absolute", top:"70px", left:"145px"}}></label>
 
-                    <label id="labelJG" hidden={true} style={{position:"absolute", top:"140px"}}>JUGADOR GANADOR</label>
-                    <label id="labelN" hidden={true} style={{position:"absolute", top:"180px"}}>NOMBRE:</label>
-                    <label id ="N" style={{position:"absolute", top:"180px", left:"95px"}}></label>
+                    <label id="labelJG" hidden={true} style={{position:"absolute", top:"150px"}}>JUGADOR GANADOR</label>
+                    <label id="labelN" hidden={true} style={{position:"absolute", top:"200px"}}>NOMBRE:</label>
+                    <label id ="N" style={{position:"absolute", top:"200px", left:"95px"}}></label>
 
-                    <label id="labelT" hidden={true} style={{position:"absolute", top:"240px"}}>TIEMPO:</label>
-                    <label id ="T" style={{position:"absolute", top:"240px", left:"85px"}}></label>
+                    <label id="labelT" hidden={true} style={{position:"absolute", top:"260px"}}>TIEMPO:</label>
+                    <label id ="T" style={{position:"absolute", top:"260px", left:"85px"}}></label>
 
-                    <label id="labelNV" hidden={true} style={{position:"absolute", top:"300px"}}>NUMERO DE VUELTAS:</label>
-                    <label id ="NV" style={{position:"absolute", top:"300px", left:"205px"}}></label>
+                    <label id="labelNV" hidden={true} style={{position:"absolute", top:"320px"}}>NUMERO DE VUELTAS:</label>
+                    <label id ="NV" style={{position:"absolute", top:"320px", left:"205px"}}></label>
                 </div>
             </div>
-            <button className="buttonHome" style={{left: "950px", top: "800px"}} onClick = {props.setHomeScreen}></button>
+            <button className="buttonHome" style={{left: "950px", top: "830px"}} onClick = {props.setHomeScreen}>ATRÁS</button>
         </div>
     )
 }
