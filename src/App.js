@@ -13,41 +13,41 @@ function App() {
     //(0:Modulo principal - 1:Modulo de crear partida - 2:Modulo de unirse a partida)
     const [moduloActual, setmoduloActual] = useState(0) //variable para cambiar entre los modulos
     const [lista1, setLista1] = useState([])
+    const obtenerLista = lista1;
 
-    const cambiarModulo = (value) => {
-        setmoduloActual(value)
+        const cambiarModulo = (value) => {
+            setmoduloActual(value);
+        };
+
+        const home = () => {
+            setmoduloActual(0);
+        };
+
+        const llenarLista = (value) => {
+            setLista1(value);
+        };
+
+        return (
+            <div>
+                {moduloActual === 0 ?
+                    <MainScreen
+                        setCreateModule={cambiarModulo}
+                        setJoinModule={cambiarModulo}
+                        setViewStatistics={cambiarModulo}
+                        setLista={llenarLista} 
+                        /> : moduloActual === 1 ?
+                        <CreateModule
+                            setHomeScreen={home} />
+                        : moduloActual === 2 ?
+                            <JoinModule />
+                            : <StatisticsModule
+                                setHomeScreen={home}
+                                setLista={llenarLista}
+                                obtenerResultados = {obtenerLista}
+                                 />}
+            </div>
+        );
     }
-
-    const home = () => {
-        setmoduloActual(0)
-    }
-
-    const llenarLista = (value) => {
-        setLista1(value)
-    }
-
-    return (
-        <div>
-            {
-                moduloActual === 0 ? 
-                <MainScreen
-                    setCreateModule = {cambiarModulo}
-                    setJoinModule = {cambiarModulo}
-                    setViewStatistics = {cambiarModulo}
-                /> : moduloActual === 1 ?
-                <CreateModule
-                    setHomeScreen = {home}
-                />
-                : moduloActual === 2 ? 
-                <JoinModule/>
-                : <StatisticsModule
-                    setHomeScreen = {home}
-                    setLista = {llenarLista}
-                />
-            }
-        </div>
-    );
-}
 
 
 export default App;

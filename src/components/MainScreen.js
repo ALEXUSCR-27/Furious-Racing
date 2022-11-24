@@ -6,9 +6,10 @@ export default function MainScreen(props) {
 
     const consultaEstadisticas = () => {
 
-        axios.post("https://8f25-201-202-14-140.ngrok.io/estadisticas", "vacio")
+        axios.post("https://ee03-201-202-14-140.ngrok.io/estadisticas", "nada")
 		.then(response => { 
         const datosE = response.data;
+        props.setLista(datosE);
         console.log(datosE);
         })
         .catch(error => console.log(error));

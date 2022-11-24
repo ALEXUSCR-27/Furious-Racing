@@ -1,10 +1,14 @@
 import ej1 from './listaEj1.js';
 import deta from './detallesL.js';
+import { useState } from 'react';
 export default function StatisticsModule(props) {
+    let listaResultados = props.obtenerResultados;
+    var listaJugadores = [];
+    const [lista, setLista] = useState([]);
 
-
-    const mostrarDetalles = (id) => {
-        console.log("me cago en su maire");
+    const mostrarDetalles = (datosDetalles) => {
+        setLista(datosDetalles.jugadores);
+        console.log(listaJugadores);
         //pido los datos de la partida por el id
         let labelNP = document.getElementById("labelNP");
         let labelID = document.getElementById("labelID");
@@ -28,11 +32,11 @@ export default function StatisticsModule(props) {
         labelNV.removeAttribute("hidden");
         listaJ.removeAttribute("hidden");
 
-        NP.innerHTML = deta.NombrePista; 
-        ID.innerHTML = deta.IDPartida;
-        N.innerHTML = deta.JGanador;
-        T.innerHTML = deta.Tiempo;
-        NV.innerHTML = deta.NVueltas;
+        NP.innerHTML = datosDetalles.pista; 
+        ID.innerHTML = datosDetalles.id;
+        N.innerHTML = datosDetalles.ganador;
+        T.innerHTML = datosDetalles.tiempo;
+        NV.innerHTML = datosDetalles.vueltas;
         //agregar el mapeo de la lista de jugadores labelT
 
         
@@ -51,10 +55,10 @@ export default function StatisticsModule(props) {
                             </tr>
                         </thead>
                         <tbody>
-                            {ej1.map((e) =>(
-                                <tr className='filaT1' style={{cursor: "pointer"}} onClick={() => mostrarDetalles(e.IdentificadorPartida)}>
-                                    <td>{e.NombrePista}</td>
-                                    <td>{e.IdentificadorPartida}</td>
+                            {listaResultados.map((e) =>(
+                                <tr className='filaT1' style={{cursor: "pointer"}} onClick={() => mostrarDetalles(e.detalles)}>
+                                    <td>{e.pista}</td>
+                                    <td>{e.id}</td>
                                     <td>{e.cantidadJugadores}</td>
                                 </tr>
                             ))}
@@ -72,10 +76,10 @@ export default function StatisticsModule(props) {
                             </tr>
                         </thead>
                         <tbody>
-                        {ej1.map((e) =>(
+                        {lista.map((e) =>(
                                 <tr className='filaT1'>
-                                    <td>{e.NombrePista}</td>
-                                    <td>{e.IdentificadorPartida}</td>
+                                    <td>{e.nombre}</td>
+                                    <td>{e.posicion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -103,3 +107,5 @@ export default function StatisticsModule(props) {
         </div>
     )
 }
+
+
