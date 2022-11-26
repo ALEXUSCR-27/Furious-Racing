@@ -43,7 +43,7 @@ export default function StatisticsModule(props) {
     } 
 
     return (
-        <div className="container">
+        <div className="mainStyle">
             <div className="squareStatistics1" style={{left: "200px", top: "20px"}}>
                 <div className="cuadroT">
                     <table className="table1" style={{"border-collapse": "collapse"}}>

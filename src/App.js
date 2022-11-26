@@ -5,6 +5,7 @@ import { getValue } from '@testing-library/user-event/dist/utils/index.js';
 import JoinModule from './components/JoinModule.js';
 import StatisticsModule from './components/StatisticsModule.js';
 
+
 function App() {
 
     //variables de estado
@@ -39,7 +40,9 @@ function App() {
                         <CreateModule
                             setHomeScreen={home} />
                         : moduloActual === 2 ?
-                            <JoinModule />
+                            <JoinModule 
+                                setHomeScreen={home}
+                            />
                             : <StatisticsModule
                                 setHomeScreen={home}
                                 setLista={llenarLista}

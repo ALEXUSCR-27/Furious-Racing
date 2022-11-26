@@ -3,18 +3,18 @@
 * Codigo css del estilo principal del cuerpo de varias secciones del juego
 */
 body {
-  margin: 0;
+  margin: auto;
   padding: 0;
   height: 100%;
   width: 100%;
   content: url(/public/f1.jpg) url(/public/f2.png) url(/public/f3.jpg) url(/public/f5.jpg) url(/public/f7.png) url(/public/f8.jpg) url(/public/f6.png) url(/public/f9.png)
-  url(/public/t2.png) url(/public/11.png) url(/public/home.png) url(/public/m3.png);
+  url(/public/t2.png) url(/public/11.png) url(/public/home.png) url(/public/m3.png) url(/public/logo2.png);
 }
 
 /*
 * Codigo css para el estilo y transicion de imagenes de fondo del juego
 */
-.container {
+.mainStyle {
     height: 100vh;
     width: 100%;
     background-image: url(/public/f2.png);
@@ -97,6 +97,17 @@ body {
     cursor: pointer;
 }
 
+.buttonCerrar {
+    width: 100px;
+    height: 40px;
+    font-family: 'Anton', sans-serif;
+    font-style: bold;
+    font-weight: 400;
+    font-size: 20px;
+
+
+}
+
 .buttonHome {
     width: 100px;
     height: 50px;
@@ -122,6 +133,7 @@ body {
     height: 871px;
     background: #FFFFFF;
     border: 3px solid #000000;
+    border-radius: 10px;
     box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
     left: 432px;
     top: 50px;
@@ -139,6 +151,7 @@ body {
     left: 0px;
     top: 771px;
     background: #750606;
+    border-radius: 10px;
     border: 3px solid #000000;
     left: 432px;
     top: 840px;
@@ -167,7 +180,7 @@ body {
     width: 100%;
     background-size: cover;
     background-position: center;
-    background-color: #0E1DA1;
+    background-color: #1a1a1a;
 }
 
 
@@ -182,12 +195,10 @@ body {
     left: 105px;
     top: 110px;
  
-
     font-family: 'Anton', sans-serif;
     color: #000000;
     font-style: bold;
     font-size: 22px;
-    
  
     text-align:center;
     overflow-x: auto;
@@ -214,7 +225,6 @@ body {
 .cuadroT3 {
     box-sizing: border-box;
     position: absolute;
-    border: 3px solid #000000;
 
     font-family: 'Anton', sans-serif;
     color: #000000;
@@ -254,39 +264,27 @@ body {
     
 }
 
-
 .table1 thead {
     position:sticky;
-
     top: 0px;
-    
-
 }
 
-
 .table1 tbody {
-
     width: auto;
     height: 150px;
     width: 200px;
     overflow: auto;
     
-    
-
-  }
-.table1 td {
-    padding: 20px;
-    
 }
 
-
-
+.table1 td {
+    padding: 20px;
+}
 
 .filaT1 {
     margin: auto;
     border-bottom: 8px #f0f6ed;
     border-style:solid;
-
 
     border-left: 0;
     border-right: 0;
@@ -316,6 +314,26 @@ body {
     
 }
 
+.inputC {
+    width: 100px;
+    height: 40px;
+    border: 3px solid #000000;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    
+    
+}
+
+.Modal {
+    background-color: #FFFFFF;
+    width: 400px;
+    height: 200px;
+    position:absolute;
+    top: 0px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
 .table2 tbody {
     width: auto;
     height: 150px;
@@ -337,47 +355,87 @@ body {
     -webkit-box-shadow: inset 0 0 6px #000000; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.img1 {
-    position: absolute;
-    transition: .4s;
-    transform-origin: 50%, 50%;
-    width: 100%;
-}
-.box {
-    float: right;
-    overflow: hidden;
+.NameSelection {
+    font-family: 'Anton', sans-serif;
+    color: #000000;
+    font-style: bold;
+    font-size: 25px;
     position: relative;
-    margin: 0;
+    top: 300px;
+    text-align: center;
+    
 }
 
-.img2 {
-    filter: blur(20px);
-    transform: scale(1.1);
-    opacity: 1;
-    transition: .4s;
-    width: 100%;
-}
-.box:hover .img1 {
-    filter: blur(20px);
-    transform: scale(1.1);
-    opacity: 0;
+.VehiculeSelection {
+    font-family: 'Anton', sans-serif;
+    color: #000000;
+    font-style: bold;
+    font-size: 45px;
+    position: relative;
+    top: 70px;
+    text-align: center;
 }
 
-.box:hover .img2 {
-    filter: blur(20px);
-    transform: scale(1.1);
-    opacity: 0;
+.inputName {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    border: 3px solid #000000;
+    width: 400px;
+    text-align: center;
 }
 
+.Carro1 {
+    position: absolute;
+    margin: auto;
+    padding: 0;
+    top: 200px;
+    left: 100px;
+    width: 400px;
+    height: 200px;
+    background-image: url(/public/carro1_2.png);
+    border-radius: 10px;
+
+    background-size: auto;
+    box-sizing: border-box;
+
+}
+.Carro2 {
+    position: absolute;
+    margin: auto;
+    padding: 0;
+    top: 200px;
+    left: 550px;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    background-image: url(/public/carro2_1.png);
+    background-size: auto;
+
+    box-sizing: border-box;
+}
+.Carro3 {
+    position: absolute;
+    margin: auto;
+    padding: 0;
+    top: 450px;
+    left: 100px;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    background-image: url(/public/carro3_1.png);
+
+    box-sizing: border-box;
+}
+.Carro4 {
+    position: absolute;
+    margin: auto;
+    padding: 0;
+    top: 450px;
+    left: 550px;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    background-image: url(/public/carro4_1.png);
+
+    box-sizing: border-box;
+}
 
