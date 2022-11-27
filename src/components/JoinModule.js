@@ -6,18 +6,22 @@ export default function JoinModule(props) {
     const [opcionActual, setOpcionActual] = useState(0);
     const [nombre, setNombre] = useState("");
 
+    const [vehiculo, setVehiculo] = useState("");
+
     const cambiarOpcion = (value) => {
         setOpcionActual(value);
-        if (document.getElementById("carro1_2.png").onclick(true)) {console.log("si");}
+        if (opcionActual === 1) setNombreJ();
     };
 
-    const guardarNombre = () => {
-        setNombre(document.getElementById("inputN").value);
+    const setNombreJ = () => {
+        let n = document.getElementById("inputN").value;
+        console.log(n);
+        setNombre(n);
     }
 
-    const setNombreJ = (value) => {
-        setNombre(value);
-    }
+    const setSelectionV = (value) => {
+        setVehiculo(value);
+    } 
 
     return (
         <div className="joinModule">
@@ -25,7 +29,9 @@ export default function JoinModule(props) {
                 {
                     opcionActual===0 ?
                     <NameSection
-                    /> : opcionActual === 1 ? <VehiculeSection/>
+                    /> : opcionActual === 1 ? <VehiculeSection
+                        setVehicule = {setSelectionV}
+                    />
                     : opcionActual === 2 ? <GameTrack/>
                     : <GameTrack/>
                 }
