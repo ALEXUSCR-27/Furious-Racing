@@ -3,8 +3,10 @@ import pistas from './listaP.js';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import ModalExito from './ModalExito.js';
-
+import io from 'socket.io-client';
 export default function CreateModule(props) {
+
+    const socket = io.connect("http://localhost:4000");
 
     const [show, setShow] = useState(false);
 
@@ -12,16 +14,15 @@ export default function CreateModule(props) {
     const handleShow = () => setShow(true);
 
     const crearPartida = () => {
-        let cantidadvueltas = document.getElementById("cantidadvueltas");
-        let cantidadjugadores = document.getElementById("cantidadjugadores");
+        let cantidadvueltas = document.getElementById("cantidadvueltas").value;
+        let cantidadjugadores = document.getElementById("cantidadjugadores").value;
+        let room = document.getElementById("nombreP").value;
+        var name = "Alex";
+        let res = {room, name, cantidadvueltas, cantidadjugadores}
+        socket.emit('createParty', res);
         const objeto = {
             nombre: pistas.Nombre
         }
-        //axios.post("https://ee03-201-202-14-140.ngrok.io/estadisticas", "nada")
-		//.then(response => { 
-        //const datosE = response.data;
-        //})
-        //.catch(error => console.log(error));
 
         handleShow();
 
@@ -38,8 +39,8 @@ export default function CreateModule(props) {
                     <table className="table1" style={{"border-collapse": "collapse"}}>
                         <thead >
                             <tr>
-                                <th>NOMBRE DE PISTA</th>
                                 <th>ID DE PISTA</th>
+                                <th>EXTENSION</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -58,6 +59,8 @@ export default function CreateModule(props) {
                     <input id = "cantidadvueltas" className='inputC' style={{position:"absolute", top:"3px", left:"255px"}} type="number"></input>
                     <label style={{position:"absolute", top:"60px", left:"0px", "font-size":"30px"}}>CANTIDAD DE JUGADORES:</label>
                     <input id = "cantidadjugadores"className='inputC' style={{position:"absolute", top:"63px", left:"290px"}} type="number"></input>
+                    <label style={{position:"absolute", top:"120px", left:"0px", "font-size":"30px"}}>NOMBRE DE PARTIDA:</label>
+                    <input id = "nombreP" className='inputP' style={{position:"absolute", top:"123px", left:"240px"}}></input>
                 </div>
             </div>
             <div className="squareSelectionAux">
